@@ -28,4 +28,9 @@ steps:
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
-
+- task: SnykSecurityScan@1
+  inputs:
+    serviceConnectionEndpoint: 'devsecops'
+    testType: 'app'
+    monitorWhen: 'always'
+    failOnIssues: true
