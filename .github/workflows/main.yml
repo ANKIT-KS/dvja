@@ -18,7 +18,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Snyk SCA Scanning
-      continue-on-error: true
+      continue-on-error: false
       run: |
         echo "----------Download Latest Snyk CLI-----------"
         curl -Lo ./snyk "https://github.com/snyk/snyk/releases/download/v1.1060.0/snyk-linux"
