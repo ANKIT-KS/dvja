@@ -28,4 +28,4 @@ jobs:
         ./snyk auth ${{secrets.Snyk_token}}
         echo "----------Snyk Scanning-----------"
         echo "----------Snyk Monitor------------"
-        ./snyk monitor --all-projects --severity-threshold=medium --fail-on=upgradable
+        ./snyk monitor --all-projects --severity-threshold=critical
